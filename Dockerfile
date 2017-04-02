@@ -1,6 +1,5 @@
 FROM soluto/android:25.0.2
 
-
 MAINTAINER Or Yagel <or@soluto.com>
 
 ENV NODEJS_VERSION=4.7.2 \
