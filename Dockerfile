@@ -13,3 +13,5 @@ RUN apt-get update && apt-get install -y curl ca-certificates --no-install-recom
     rm -rf /var/lib/apt/lists/* && \
     npm install npm@3.10.9 -g && \
     apt-get clean
+
+RUN npm install -g gulp
