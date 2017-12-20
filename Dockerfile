@@ -2,7 +2,7 @@ FROM soluto/android:26-4
 
 MAINTAINER Or Yagel <or@soluto.com>
 
-ENV NODEJS_VERSION=8 \
+ENV NODEJS_VERSION=8.9.3 \
     PATH=$PATH:/opt/node/bin
 
 WORKDIR "/opt/node"
