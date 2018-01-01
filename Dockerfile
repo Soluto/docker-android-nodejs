@@ -12,3 +12,5 @@ RUN apt-get update && apt-get install -y curl ca-certificates --no-install-recom
 
 RUN curl -sL https://nodejs.org/dist/v${NODEJS_VERSION}/node-v${NODEJS_VERSION}-linux-x64.tar.gz | tar xz --strip-components=1
 RUN npm install -g yarn@${YARN_VERSION}
+
+CMD bash
