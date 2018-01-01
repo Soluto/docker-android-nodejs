@@ -9,6 +9,8 @@ WORKDIR "/opt/node"
 RUN apt-get update && apt-get install -y curl ca-certificates --no-install-recommends && \    
     apt-get install -y git && \
     apt-get install -y bzr && \
+    apt-get install -y g++ && \
+    apt-get install -y build-essential && \    
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean
 
