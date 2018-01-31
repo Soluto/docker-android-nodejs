@@ -9,6 +9,7 @@ ENV NODEJS_VERSION=8.9.3 \
 
 WORKDIR "/opt/node"
 
+
 RUN apt-get update && apt-get install -y curl ca-certificates --no-install-recommends && \    
     apt-get install -y git && \
     apt-get install -y bzr && \
