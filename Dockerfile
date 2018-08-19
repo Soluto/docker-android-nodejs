@@ -1,4 +1,4 @@
-FROM soluto/android:28.0.2-4.9
+FROM soluto/android:28-4.9
 
 MAINTAINER Or Yagel <or@soluto.com>
 
