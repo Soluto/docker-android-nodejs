@@ -15,4 +15,3 @@ RUN apt-get update && apt-get install -y curl ca-certificates --no-install-recom
     apt-get clean
 
 RUN npm install -g gulp
-
