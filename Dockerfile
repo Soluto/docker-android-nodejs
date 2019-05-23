@@ -16,4 +16,4 @@ RUN apt-get update && apt-get install -y curl ca-certificates --no-install-recom
 
 RUN npm install -g gulp
 
-# For triggering a docker build |
+# For triggering a docker build ||
