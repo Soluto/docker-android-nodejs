@@ -4,7 +4,7 @@ MAINTAINER Or Yagel <or@soluto.com>
 
 ENV NODEJS_VERSION=8.9.3 \
     PATH=$PATH:/opt/node/bin
-    YARN_VERSION=1.16.0
+    YARN_VERSION=1.3.2
 
 WORKDIR "/opt/node"
 
