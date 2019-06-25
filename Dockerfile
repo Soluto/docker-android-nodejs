@@ -1,4 +1,4 @@
-FROM soluto/android:28-4.9
+FROM soluto/android:28-5.4.1
 
 RUN adduser --disabled-password --gecos '' soluto
 RUN usermod -aG sudo soluto  
