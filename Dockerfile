@@ -1,17 +1,27 @@
-FROM soluto/android:26
+FROM soluto/android:28-5.4.1
 
-MAINTAINER Or Yagel <or@soluto.com>
+RUN adduser --disabled-password --gecos '' soluto
+RUN usermod -aG sudo soluto  
 
-ENV NODEJS_VERSION=6.9.2 \
-    PATH=$PATH:/opt/node/bin
+ENV NODEJS_VERSION=8.9.3 \
+    PATH=$PATH:/opt/node/bin \
+    YARN_VERSION=1.5.1
 
 WORKDIR "/opt/node"
 
-RUN apt-get update && apt-get install -y curl ca-certificates --no-install-recommends && \
-    curl -sL https://nodejs.org/dist/v${NODEJS_VERSION}/node-v${NODEJS_VERSION}-linux-x64.tar.gz | tar xz --strip-components=1 && \
+
+RUN apt-get update && apt-get install -y curl ca-certificates --no-install-recommends && \    
     apt-get install -y git && \
+    apt-get install -y bzr && \
+    apt-get install -y g++ && \
+    apt-get install -y build-essential && \    
     rm -rf /var/lib/apt/lists/* && \
-    npm install npm@3.10.9 -g && \
     apt-get clean
 
-RUN npm install -g gulp
+RUN curl -sL https://nodejs.org/dist/v${NODEJS_VERSION}/node-v${NODEJS_VERSION}-linux-x64.tar.gz | tar xz --strip-components=1
+RUN npm install -g yarn@${YARN_VERSION}
+
+WORKDIR "/"
+CMD bash
+
+# For triggering build |
