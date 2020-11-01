@@ -3,7 +3,7 @@ FROM soluto/android:28-5.4.1
 RUN adduser --disabled-password --gecos '' soluto
 RUN usermod -aG sudo soluto  
 
-ENV NODEJS_VERSION=8.10.9 \
+ENV NODEJS_VERSION=8.10.0 \
     PATH=$PATH:/opt/node/bin \
     YARN_VERSION=1.22.10
 
