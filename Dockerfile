@@ -23,3 +23,5 @@ RUN npm install -g yarn@${YARN_VERSION}
 
 WORKDIR "/"
 CMD bash
+
+# For triggering build |
