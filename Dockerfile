@@ -5,7 +5,7 @@ RUN usermod -aG sudo soluto
 
 ENV NODEJS_VERSION=8.9.3 \
     PATH=$PATH:/opt/node/bin \
-    YARN_VERSION=1.3.2
+    YARN_VERSION=1.22.10
 
 WORKDIR "/opt/node"
 
@@ -23,5 +23,3 @@ RUN npm install -g yarn@${YARN_VERSION}
 
 WORKDIR "/"
 CMD bash
-
-# For triggering build |
